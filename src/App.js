@@ -7,7 +7,8 @@ import CreateEvent from './components/CreateEvent'
 import EditEvent from './components/EditEvent';
 import ViewEvents from './components/ViewEvents';
 import ViewEventDetails from './components/ViewEvent';
-
+//import LogIn from './components/LoginIn';
+// import SignUp from './components/SignUp';
 class App extends Component {
   render(){
   return (
@@ -19,7 +20,8 @@ class App extends Component {
           <Route  path='/create/event' element={<CreateEvent/>} />
           <Route  path='/edit/event/:id' element={<EditEvent/>} />  
           <Route  path='/view/event/:id' element={<ViewEventDetails/>} />  
-            
+          {/* <Route  path='/signup' element={<SignUp/>} /> */}
+          {/* <Route   path='/signup' element={<LogIn/>}  /> */}
         </Routes>
         </BrowserRouter>
       </div>

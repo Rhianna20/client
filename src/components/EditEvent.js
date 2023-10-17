@@ -38,6 +38,7 @@ function EditEvent(props){
 
 
 const onChange = (e) => {
+
     setEvent({
          ...event, [e.target.name]: e.target.value  })
 };
@@ -55,7 +56,7 @@ const onSubmit = (e) => {
     }
 
     axios
-    .put(`http://localhost:5000/edit/event/${id}`, eventData)
+    .patch(`http://localhost:5000/edit/event/${id}`, eventData)
     .then((res) => {
         navigate(`/view/event/${id}`)
     })
@@ -70,7 +71,7 @@ const onSubmit = (e) => {
         <h1>Edit Event</h1>
         <form noValidate onSubmit={onSubmit}>
             <input type='text'
-             placeholder='Name of the event' 
+             placeholder={'Name of the event'} 
              name='event_name' 
              defaultValue={event.event_name}
               onChange={onChange}

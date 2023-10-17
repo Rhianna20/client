@@ -9,7 +9,7 @@ const CreateEvent = (props) => {
     const [event, setEvent] = useState({
         event_name: '',
         location: '',
-        date: '',
+        date: 'yay',
         created_by: '',
         price: '',
         genre: '',
